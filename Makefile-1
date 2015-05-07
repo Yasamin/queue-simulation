@@ -1,0 +1,8 @@
+all : mm1-queue
+
+mm1-queue : mm1-queue.cc
+	 g++ -g -o mm1-queue  mm1-queue.cc
+	 ./mm1-queue  0.25 0.98 0.1
+	 ./mm1-queue  1.2 1.23 0.1
+	 
+clean: rm -rf mm1-queue

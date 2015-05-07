@@ -1,0 +1,33 @@
+all : mm1k-queue_all
+
+mm1k-queue_all : mm1k-queue.cc
+	 g++ -g -o mm1k-queue  mm1k-queue.cc
+	 ./mm1k-queue  5 0.4 2.05 0.1
+	 ./mm1k-queue  5 2.2 5.1 0.2
+	 ./mm1k-queue  5 5.4 10 0.4
+	 ./mm1k-queue  10 0.4 2.05 0.1
+	 ./mm1k-queue  10 2.2 5.1 0.2
+	 ./mm1k-queue  10 5.4 10 0.4
+	 ./mm1k-queue  40 0.4 2.05 0.1
+	 ./mm1k-queue  40 2.2 5.1 0.2
+	 ./mm1k-queue  40 5.4 10 0.4
+
+mm1k-queue_K_5 : mm1-queue.cc
+	 g++ -g -o mm1k-queue  mm1-queue.cc
+	 ./mm1k-queue  5 0.4 2.05 0.1
+	 ./mm1k-queue  5 2.2 5.1 0.2
+	 ./mm1k-queue  5 5.4 10 0.4
+
+mm1k-queue_K_10 : mm1-queue.cc
+	 g++ -g -o mm1k-queue  mm1-queue.cc
+	 ./mm1k-queue  10 0.4 2.05 0.1
+	 ./mm1k-queue  10 2.2 5.1 0.2
+	 ./mm1k-queue  10 5.4 10 0.4
+
+mm1k-queue_K_40 : mm1-queue.cc
+	  g++ -g -o mm1k-queue  mm1-queue.cc
+	 ./mm1k-queue  40 0.4 2.05 0.1
+	 ./mm1k-queue  40 2.2 5.1 0.2
+	 ./mm1k-queue  40 5.4 10 0.4
+
+clean: rm -rf mm1k-queue
